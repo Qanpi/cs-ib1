@@ -4,18 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffbbe5b6-45a1-4956-a670-83d35d3c6da0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../array-algorithms/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../array-algorithms/src/com/company/Main.java" afterDir="false" />
+    <list default="true" id="2f1a95f3-665c-4696-81b0-36be72119a1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/SortingComparison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/array-algorithms.iml" beforeDir="false" afterPath="$PROJECT_DIR$/array-algorithms.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nested-loops/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../nested-loops/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2FfJf9iKa51UdFNXnlakA5rjivH" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="2FnNTtNqZJzIrAm3P1JqdCH7VnU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -79,18 +97,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../array-algorithms" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\aleks\OneDrive - Suomalaisen Yhteiskoulun Osakeyhtiö\Tiedostot\School\IB1\Computer Science\nested-loops" />
-    </key>
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ibcsutils/ibcsutils/ibcsutils.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="nested-loops" />
+      <module name="array-algorithms" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -107,17 +123,24 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ffbbe5b6-45a1-4956-a670-83d35d3c6da0" name="Changes" comment="" />
-      <created>1664877309410</created>
+      <changelist id="2f1a95f3-665c-4696-81b0-36be72119a1c" name="Changes" comment="" />
+      <created>1665123902511</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1664877309410</updated>
+      <updated>1665123902511</updated>
     </task>
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

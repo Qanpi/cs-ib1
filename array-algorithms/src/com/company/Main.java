@@ -1,12 +1,90 @@
 package com.company;
 
 import javax.print.attribute.standard.PresentationDirection;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import ibcsutils.*;
+import javafx.application.Application;
+
 
 public class Main {
 
     public static void main(String[] args) {
-        hw2();
+        int k = 10000;
+        Integer[] data = new Integer[k];
+        for (int i=0; i<k; i++) {
+            data[i] = i;
+        }
+
+        Sorter<Integer> s = new Sorter<>(data);
+        s.run();
+        //Application.launch(GUI.class);
     }
+
+    public static int[] insertionSort(int data[]) { //hw 5
+          for (int i=1; i<data.length; i++) {
+              int val = data[i];
+              int j = i-1;
+              while(j>= 0 && data[j] > val) {
+                  data[j+1] = data[j];
+                  j--;
+              }
+              data[j+1] = val;
+          }
+
+          return data;
+    }
+
+    public static void hw4() {
+        String addr = "http://www-personal.umich.edu/~jlawler/wordlist";
+
+        String[] words = ReadViaURL.readWords(addr, true, true, true);
+        boolean found = sequentialSearch(words, "test");
+        System.out.println(found);
+
+        found = binarySearch(words, "test");
+        System.out.println(found);
+    }
+
+    static int[] bubbleSort(int data[]){
+        //how could you utilize the fact that the last element is always last after first pass
+
+        boolean changed = true;
+
+        while(changed){
+            changed = false; // smart use of booleans
+            for (int i=1; i< data.length; i++) {
+                if (data[i-1] > data[i]) {
+                    swap(data, i-1, i);
+                    changed = true;
+                }
+            }
+        }
+        return data;
+    }
+
+    static void swap(int[] arr,int i,int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    static int[] selectionSort(int data[]) {
+        for (int i=0; i<data.length-1; i++) {
+            int indSmallest = i;
+            //finding index first to avoid unnecessary swapping
+            for (int j=i+1; j<data.length; j++) {
+                if (data[j] < data[indSmallest]) {
+                    indSmallest = j;
+                }
+            }
+            int temp = data[i];
+            data[i] = data[indSmallest];
+            data[indSmallest] = temp;
+        }
+        return data;
+    }
+
 
     static void hw2() {
         String[] students = {"Alissa", "Ben", "Charlie", "Dianna"};
@@ -41,23 +119,33 @@ public class Main {
         System.out.println(found);
     }
 
+    static boolean binarySearch(String[] words, String key) {
+        int k=0;
+        for(int step=words.length/2; step>=1; step/=2) {
+            while(k+step < words.length && words[k+step].compareTo(key) <= 0) k+=step;
+        }
+        if (words[k].equals(key)) System.out.println(words[k]);
+        return true;
+    }
 
-    static void binarySearchShortcut() {
-        int[] data = {-5, -2, 0, 15, 22, 37, 44};
-        int key = 0;
-        for (int step = data.length; step > 0; step /= 2) {
-            if (data[step-1] == key) {
-                System.out.println("found");
-            } else if (data[step-1] > key) {
-                continue;
-            }
+
+    static void binarySearch(int data[], int key) {
+        int k = 0;
+        for (int step = data.length/2; step >= 1; step /= 2) {
+            while (k + step < data.length && data[k+step] <= key) k += step;
+        }
+        if (data[k] == key) {
+            System.out.println(data[k]);
         }
     }
 
-    static void sequentialSearch() {
-        int[] numbers = {5, -4, 15, 76, 22};
+    static boolean sequentialSearch(String[] words, String key) {
+        for(String w : words) if (w.equals(key)) return true;
+        return false;
+    }
+
+    static void sequentialSearch(int [] numbers, int key) {
         int i = 0;
-        int key = 15;
         boolean found = false;
         while (!found && i < numbers.length) {
             if (numbers[i] == key) {

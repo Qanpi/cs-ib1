@@ -16,7 +16,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="jfree.jfreechart" level="project" />
-    <orderEntry type="library" name="javafx-sdk-19" level="project" />
   </component>
 </module>
