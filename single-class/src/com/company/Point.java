@@ -30,6 +30,7 @@ public class Point {
     }
 
     public Point midpoint(Point p1) {
+        //could've just found the distance between the x and y points respectively
         double dx = new Point(x, 0).distance(new Point (p1.x, 0));
         double dy = new Point(0, y).distance(new Point (0, p1.y));
 
