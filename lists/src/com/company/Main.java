@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -24,6 +21,7 @@ public class Main {
 
         // implement these methods
         list.addLast (99);
+        System.out.println (list);
         list.add (1, -33);
         System.out.println (list);
 
@@ -100,6 +98,28 @@ public class Main {
             list.add(i, val); //autoboxing
         }
         sc.close();
+        System.out.println(list);
+    }
+
+    public static void example5() {
+        LinkedList<Integer> list = new LinkedList<>();
+        Collections.addAll(list, 5, 11, 7);
+        System.out.println(list);
+
+        ListIterator<Integer> it = list.listIterator();
+        it.add(20);
+        System.out.println(list);
+        int test = it.next();
+        System.out.println(test);
+        it.remove();
+        System.out.println(list);
+        test = it.next();
+        System.out.println(test);
+        it.set(-15);
+        System.out.println(list);
+        it.remove();
+        System.out.println(list);
+        it.remove();
         System.out.println(list);
     }
 
