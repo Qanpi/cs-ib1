@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Homework1 {
-    final static int MAX_N = 10000;
+    final static int MAX_N = 10;
     int numbers[];
 
     Storage storage;
@@ -43,6 +43,8 @@ public class Homework1 {
             case Serialization -> input = readSerialized();
             case RandomAccess -> input = readRandomAccess(3);
         }
+        System.out.println(Arrays.toString(input));
+        System.out.println(Arrays.toString(numbers));
 
         for (int i=0; i<MAX_N; i++) {
             if (input[i] != numbers[i]) return false;
@@ -89,7 +91,7 @@ public class Homework1 {
     }
 
     private int[] readSerialized() {
-        int[] input = new int[MAX_N];
+        int[] input = null; //no space alloc needed
         try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(fname))) {
             input = (int[]) in.readObject();
         } catch (IOException | ClassNotFoundException e) {

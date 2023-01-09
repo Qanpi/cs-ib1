@@ -12,8 +12,8 @@ public class Main {
 }
 
 enum Storage {
-    Text,
-    RandomAccess,
+    Text, //-> 0
+    RandomAccess, // -> 1
     Serialization,
     Database
 }
